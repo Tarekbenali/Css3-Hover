@@ -1,0 +1,527 @@
+//import _.scss files
+@import "variables";
+@import "mixin";
+
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+
+}
+.row {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 1em;
+  text-align: center;
+  @media screen and (max-width: 700px) {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  } 
+  
+}
+
+.bt {
+  display: inline-block;
+  font-family: null;
+  font-weight: 400;
+  color: $white;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid $white;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  position: relative;
+  outline: 0;
+  overflow: hidden;
+  @include transition;
+  z-index: 10000;
+  @media screen and (max-width: 700px) {
+   margin-bottom: 1rem;
+  }
+}
+
+.bt:focus {
+  outline: 0;
+  box-shadow: none !important;
+}
+
+.hover-1 {
+  background-color: transparent!important;
+  &:before,
+  &:after {
+    content: "";
+    width: 0;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    @include transition;
+  }
+  &:before {
+    left: 50%;
+  }
+  &:after {
+    right: 50%;
+  }
+  &:hover {
+    color: $color-white;
+    &:before,
+    &:after {
+      width: 50%;
+      opacity: 1;
+    }
+  }
+  @include buttoncolor;
+}
+
+.hover-2 {
+  background-color: transparent!important;
+  &:before {
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 0px;
+    width: 100%;
+    z-index: -1;
+    content: "";
+    @include transition;
+  }
+  &:hover {
+    color: $color-white;
+    &:before {
+      bottom: 0%;
+      top: auto;
+      height: 100%;
+    }
+  }
+  @include buttoncolor;
+}
+
+.hover-3 {
+  background-color: transparent!important;
+  &:before {
+    display: block;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    height: 0px;
+    width: 100%;
+    z-index: -1;
+    content: "";
+    @include transition;
+  }
+  &:hover {
+    color: $color-white;
+    &:before {
+      top: 0%;
+      bottom: auto;
+      height: 100%;
+    }
+  }
+  @include buttoncolor;
+}
+
+.hover-4 {
+  background-color: transparent!important;
+  &:before {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 0px;
+    z-index: -1;
+    content: "";
+    @include transition;
+  }
+  &:hover {
+    color: $color-white;
+    &:before {
+      right: 0%;
+      left: auto;
+      width: 100%;
+    }
+  }
+  @include buttoncolor;
+}
+
+.hover-5 {
+  background-color: transparent!important;
+  &:before {
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 0px;
+    z-index: -1;
+    content: "";
+    @include transition;
+  }
+  &:hover {
+    color: $color-white;
+    &:before {
+      left: 0%;
+      right: auto;
+      width: 100%;
+    }
+  }
+  @include buttoncolor;
+}
+
+.hover-6 {
+  background-color: transparent!important;
+  &:after {
+    content: "";
+    position: absolute;
+    height: 0%;
+    left: 50%;
+    top: 50%;
+    width: 150%;
+    z-index: -1;
+    @include transition;
+    transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+  }
+  &:hover {
+    color: $color-white;
+    &:after {
+      height: 450%;
+    }
+  }
+  @include buttoncolor;
+}
+
+.hover-7 {
+  background-color: transparent!important;
+  &:after {
+    content: "";
+    position: absolute;
+    height: 0%;
+    left: 50%;
+    top: 50%;
+    width: 150%;
+    z-index: -1;
+    @include transition;
+    transform: translateX(-50%) translateY(-50%) rotate(25deg);
+  }
+  &:hover {
+    color: $color-white;
+    &:after {
+      height: 450%;
+    }
+  }
+  @include buttoncolor;
+}
+
+.hover-8 {
+  @include transition2;
+  @include fullbcolor-1;
+}
+
+.hover-9 {
+  @include transition2;
+  @include fullbcolor-2;
+}
+
+.hover-10 {
+  background-color: transparent!important;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    z-index: -1;
+    @include transition;
+  }
+  &:before {
+    top: 0;
+    left: 0;
+  }
+  &:after {
+    bottom: 0;
+    right: 0;
+  }
+  &:hover {
+    color: $color-white;
+    &:before,
+    &:after {
+      height: 50%;
+    }
+  }
+  @include buttoncolor;
+}
+
+.hover-11 {
+  background-color: transparent!important;
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    // left:0;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    @include transition;
+  }
+  &:before {
+    top: 0;
+    left: 0;
+  }
+  &:after {
+    bottom: 0;
+    right: 0;
+  }
+  &:hover {
+    color: $color-white;
+    &:before,
+    &:after {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  @include buttoncolor;
+}
+
+.hover-12 {
+  &:before {
+    content: "";
+    width: 50px;
+    height: 155px;
+    position: absolute;
+    top: -50px;
+    left: -75px;
+    opacity: 0.2;
+    z-index: -1;
+    transform: rotate(35deg);
+    transition: all 300ms;
+  }
+  &:hover {
+    &:before {
+      left: 120%;
+    }
+  }
+  @include buttoncolor-2;
+}
+
+.hover-13 {
+  &:hover {
+    animation-duration: 1s;
+    animation-name: animate;
+  }
+  @include buttoncolor-2;
+  @include transition;
+  @keyframes animate {
+    0% {
+      transform: none;
+    }
+    10% {
+      transform: skewX(-15deg) skewY(-15deg);
+    }
+    30% {
+      transform: skewX(10deg) skewY(10deg);
+    }
+    50% {
+      transform: skewX(-3deg) skewY(-3deg);
+    }
+    70% {
+      transform: skewX(10deg) skewY(10deg);
+    }
+    80% {
+      transform: skewX(-0.7deg) skewY(-0.7deg);
+    }
+    90% {
+      transform: skewX(0.3deg) skewY(0.3deg);
+    }
+    100% {
+      transform: skewX(-0.1deg) skewY(-0.1deg);
+    }
+  }
+}
+
+.hover-14 {
+  @include fullbcolor-3;
+  @include transition3;
+}
+
+.hover-15 {
+  @include fullbcolor-4;
+  @include transition4;
+}
+
+.hover-16 {
+  &:after {
+    content: "";
+    width: 100%;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    z-index: -1;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transition: all 0.3s ease-in-out 0s;
+  }
+  &:hover {
+    &:after {
+      height: 160%;
+      background: $color-white;
+      opacity: 1;
+    }
+  }
+ 
+  @include fullbcolor-5;
+}
+
+.hover-17 {
+  color: $color-black;
+  background-color: transparent!important;
+  
+  &:after {
+    content: "";
+    width: 110%;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translateX(-50%) translateY(-50%) translateZ(0px) rotate(-45deg);
+    // transition: all 0.5s ease 0s;
+    transition:all 0.5s ease-in-out;
+    
+  }
+  &:hover {
+    color: $color-white;
+    &:after {
+      height: 110px;
+    }
+  }
+  @include buttoncolor;
+}
+
+.hover-18 {
+  background-color: transparent!important;
+  &:before {
+    content: "";
+    width: 0;
+    height: 200%;
+    right: 0;
+    bottom: 0;
+    // transition: 0.4s linear;
+    position: absolute;
+    z-index: -1;
+    @include transition;
+  }
+  &:hover {
+    color: $color-white;
+    &:before {
+      width: 100%;
+      transform: rotate(180deg);
+    }
+  }
+  @include buttoncolor;
+}
+
+.hover-19 {
+  background-color: transparent!important;
+  &:after {
+    width: 0;
+    height: 103%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50%);
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: 0.4s linear;
+  }
+  &:hover {
+    color: $color-white;
+    &:after {
+      width: 85%;
+      opacity: 1;
+    }
+  }
+  &:active {
+    &:after {
+      width: 180%;
+      opacity: 1;
+    }
+  }
+  @include buttoncolor;
+}
+
+.hover-20 {
+  background-color: transparent!important;
+  &:after {
+    width: 100%;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: 0.4s linear;
+  }
+  &:hover {
+    color: $color-white;
+    &:after {
+      height: 150%;
+      opacity: 1;
+    }
+  }
+  &:active {
+    &:after {
+      height: 400%;
+      opacity: 1;
+    }
+  }
+
+  @include buttoncolor;
+}
+
+.hover-21 {
+  background-color: transparent!important;
+	&:before {
+		content: "";
+		width: 0;
+		height: 0;
+		top: 50%;
+		left: 50%;
+		transition: 0.4s linear;
+		position: absolute;
+		background-color: #2ecc71;
+		z-index: -1;
+	}
+	&:hover {
+    color: $color-white;
+	  &:before {
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	  }}
+	@include buttoncolor;
+  }
+

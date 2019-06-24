@@ -1,0 +1,111 @@
+@mixin transition {
+    transition: all 0.8s cubic-bezier(0.42, 0, 0.58, 1);
+  }
+  @mixin transition2 {
+    transition: 0.5s ease-in-out;
+  //   transition: all 0.6s ease 0s;
+  }
+  @mixin transition3 {
+  transition: all 0.40s ease;
+  }
+  @mixin transition4 {
+      transition: all 0.3s;
+  }
+  
+  @mixin fullbcolor-5 {
+    @each $name, $hex in $btn-colors {
+      &.bt-#{$name} {
+        background-color: #{$hex};
+        border-color: #{$hex};
+        color: $white;
+        &:before,
+        &:after {
+          background-color: #{$hex};
+        }
+        &:hover {
+          border-color: $white ;
+          color: #{$hex} ;
+        }}}}
+
+@mixin buttoncolor {
+  @each $name, $hex in $btn-colors {
+    &.bt-#{$name} {
+      background-color: #{$hex};
+      border-color: #{$hex};
+      color: #{$hex};
+      &:before,
+      &:after {
+        background-color: #{$hex};
+      }
+      &:hover {
+        border-color: #{$hex};
+        color: #{$hex};
+      }}}}
+
+
+@mixin buttoncolor-2 {
+    @each $name, $hex in $btn-colors {
+      &.bt-#{$name} {
+        background-color: transparent;
+        border-color: #{$hex};
+        color: #{$hex};
+        &:before,
+        &:after {
+          background-color: #{$hex};
+        }
+        &:hover {
+          border-color: #{$hex};
+          color:#{$hex};
+        }}}}
+@mixin fullbcolor-1 {
+  @each $name, $hex in $btn-colors {
+    &.bt-#{$name} {
+      background-color: #{$hex};
+      border-color: #{$hex};
+      color: $white;
+      &:hover,
+      &:focus {
+        border-color: #{$hex};
+        box-shadow: 0px 0px 0px 2.5px $white, 0px 0px 0px 5px #{$hex},
+          0px 0px 0px 10px $white, 0px 0px 0px 10.5px #{$hex};
+        background: $white;
+        color: #{$hex};
+      }}}}
+
+@mixin fullbcolor-2 {
+  @each $name, $hex in $btn-colors {
+    &.bt-#{$name} {
+      background-color: #{$hex};
+      border-color: #{$hex};
+      color: $white;
+      &:hover {
+        box-shadow: 2.5px 2.5px 0 2.5px $white, -2.5px -2.5px 0 2.5px $white,
+          0 0 0 2px $white inset, 10px 10px 0 10px #{$hex},
+          -10px -10px 0 10px #{$hex};
+      }}}}
+
+
+      @mixin fullbcolor-3 {
+        @each $name, $hex in $btn-colors {
+          &.bt-#{$name} {
+            background-color: #{$hex};
+            border-color: #{$hex};
+            color: $white;
+            &:hover {
+                box-shadow: 0 0 10px 0 #{$hex} inset, 0 0 10px 4px #{$hex};
+                color:#{$hex};
+                background-color:transparent;
+            }}}}
+      
+            @mixin fullbcolor-4 {
+                @each $name, $hex in $btn-colors {
+                  &.bt-#{$name} {
+                    background-color: #{$hex};
+                    border-color: #{$hex};
+                    color: $white;
+                    &:hover {
+                        transform: rotateX(360deg);
+                    }}}}
+
+
+                
