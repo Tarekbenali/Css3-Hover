@@ -116,4 +116,3 @@ $RECYCLE.BIN/
 *.lnk
 
 yarn.lock
-dist/
