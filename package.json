@@ -13,13 +13,14 @@
     "sass",
     "autoprefixer",
     "htmlmin",
-    "Del",
+    "del",
     "browser sync",
     "hover",
+    "responsive",
+    "button",
     "css3"
   ],
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.9.0",
     "browser-sync": "^2.26.7",
     "del": "^4.1.1",
     "gulp": "^4.0.2",
