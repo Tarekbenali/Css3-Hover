@@ -3,9 +3,7 @@
 
 ## Overview
 
-<video width="600" height="600" controls>
-  <source src="src/videocss3.mp4" type="video/mp4">
-</video>
+![Recordit GIF](http://g.recordit.co/GNCPHvFVGW.gif)
 
 
 
