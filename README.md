@@ -28,8 +28,12 @@ it 's simple
 
 ```
 
-## Contact
-[Linkedin](https://www.linkedin.com/in/tarekbenali90/)
 
-## More Project
+## Contact
+[LinkedIn](https://www.linkedin.com/in/tarekbenali90/)
+
+## Codepen
 [Codepen](https://codepen.io/Tarek-BenAli/)
+
+## NPM Project
+[NPM](https://www.npmjs.com/~tarek.benali)
